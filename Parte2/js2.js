@@ -22,6 +22,7 @@ do {
 
     let continuar = prompt("¿Desea cargar otro producto? (s/n)").toLowerCase();
 
+    
     if (continuar !== "s" && continuar !== "si") {
     break;
     }
