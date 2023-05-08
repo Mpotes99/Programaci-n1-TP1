@@ -1,7 +1,9 @@
 
+//array productoss donde se guardan los produc que el usuario cargue
 let productos = [];
 
 function cargarProducto() {
+do {
     let codigo = prompt("Ingrese el código del producto:");
     let nombre = prompt("Ingrese el nombre del producto:");
     let categoria = prompt("Ingrese la categoría del producto:");
@@ -9,22 +11,29 @@ function cargarProducto() {
     let descripcion = prompt("Ingrese la descripción del producto:");
 
     let producto = {
-    codigo: codigo,
-    nombre: nombre,
-    categoria: categoria,
-    precio: precio,
-    descripcion: descripcion,
-};
+        codigo: codigo,
+        nombre: nombre,
+        categoria: categoria,
+        precio: precio,
+        descripcion: descripcion,
+    };
 
     productos.push(producto);
 
-    alert("Producto cargado correctamente.");
+    let continuar = prompt("¿Desea cargar otro producto? (s/n)").toLowerCase();
+
+    if (continuar !== "s" && continuar !== "si") {
+      break;
+    }
+    } while (true);
+
+    alert("Productos cargados correctamente.");
 }
 
 function verProductos() {
     if (productos.length === 0) {
     alert("No hay productos cargados.");
-} else {
+    } else {
     let listaProductos = "";
 
     for (let i = 0; i < productos.length; i++) {
@@ -36,5 +45,5 @@ function verProductos() {
     }
 
     alert(listaProductos);
-}
+  
 }
