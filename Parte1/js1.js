@@ -22,11 +22,11 @@ let MostrarInfo = '' ;
     MostrarInfo += '<div> <ul>'; 
     for(let y in x){ 
         if(y == 1){ 
-            MostrarInfo += ` <li><a href = "">  <img src ='${x[y]}'>  </a></li> `;
+            MostrarInfo += ` <li class="texto"><a href = "">  <img src ='${x[y]}'>  </a></li> `;
         }else if(y==2){ 
-            MostrarInfo += `<li> $${x[y]} </li>`
+            MostrarInfo += `<li class="texto"> $${x[y]} </li>`
         }else{ 
-            MostrarInfo += `<li> ${x[y]} </li>`
+            MostrarInfo += `<li class="texto"> ${x[y]} </li>`
         }
          
     }
