@@ -32,9 +32,20 @@ do {
 }
 
 function verProductos() {
+    //Si no hay datos en producots muestra
     if (productos.length === 0) {
         alert("No hay productos cargados.");
     } else {
         let listaProductos = "";
+
+    for (let i = 0; i < productos.length; i++) {
+        listaProductos += `Código: ${productos[i].codigo}\n`;
+        listaProductos += `Nombre: ${productos[i].nombre}\n`;
+        listaProductos += `Categoría: ${productos[i].categoria}\n`;
+        listaProductos += `Precio: ${productos[i].precio}\n`;
+        listaProductos += `Descripción: ${productos[i].descripcion}\n\n`;
     }
-} 
+
+    alert(listaProductos);
+    }
+}
