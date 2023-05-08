@@ -1,4 +1,5 @@
-'use strict' ; 
+
+let productos = [];
 
 function cargarProducto() {
     let codigo = prompt("Ingrese el código del producto:");
@@ -8,13 +9,32 @@ function cargarProducto() {
     let descripcion = prompt("Ingrese la descripción del producto:");
 
     let producto = {
-        codigo: codigo,
-        nombre: nombre,
-        categoria: categoria,
-        precio: precio,
-        descripcion: descripcion,
+    codigo: codigo,
+    nombre: nombre,
+    categoria: categoria,
+    precio: precio,
+    descripcion: descripcion,
 };
 
     productos.push(producto);
+
     alert("Producto cargado correctamente.");
+}
+
+function verProductos() {
+    if (productos.length === 0) {
+    alert("No hay productos cargados.");
+} else {
+    let listaProductos = "";
+
+    for (let i = 0; i < productos.length; i++) {
+    listaProductos += `Código: ${productos[i].codigo}\n`;
+    listaProductos += `Nombre: ${productos[i].nombre}\n`;
+    listaProductos += `Categoría: ${productos[i].categoria}\n`;
+    listaProductos += `Precio: ${productos[i].precio}\n`;
+    listaProductos += `Descripción: ${productos[i].descripcion}\n\n`;
+    }
+
+    alert(listaProductos);
+}
 }
