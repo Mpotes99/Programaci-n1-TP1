@@ -22,7 +22,7 @@ do {
 
     let continuar = prompt("¿Desea cargar otro producto? (s/n)").toLowerCase();
 
-    
+
     if (continuar !== "s" && continuar !== "si") {
     break;
     }
@@ -30,3 +30,11 @@ do {
 
     alert("Productos cargados correctamente.");
 }
+
+function verProductos() {
+    if (productos.length === 0) {
+        alert("No hay productos cargados.");
+    } else {
+        let listaProductos = "";
+    }
+} 
