@@ -4,41 +4,63 @@
     box-sizing: border-box;
     font-family: "Roboto";
 }
-h1{ 
+.container{
     text-align: center;
-    margin: 3%;
-}
-.title{
-    font-size: 3rem;
-    font-weight:1000;
-
 }
 main{ 
     width: 100vw; 
+    margin-bottom: 80px;
 }
 ul{ 
     list-style: none;
 }
 button{ 
-    font-size: 1rem;
-    line-height: 1.5rem;
-    padding: .5%;
-    border: 2px solid black;
-    border-radius: 1rem;
-    background: transparent;
-    margin-left: calc(50% - 58px);
+    width: 280px;
+    height: 60px;
+    border-radius: 25px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 1.15px;
+	background-color: #252273;
+    color: white;
+    border: none;
+    box-shadow: -1px 1px 8px rgba(123, 123, 123, 0.4);
 }
 button:hover{ 
-    background-color: black;
-    color: azure;
+    background-color:white;
+    transition: background-color .5s;
+    color: #252273;
+    box-shadow: -2px 2px 16px rgba(123, 123, 123, 0.6);
+    font-weight: 700;
+}
+header{
+    text-align: ce;
+
+}
+.title{
+    margin-top: 50px;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: #252273;
+    user-select: none;
+}
+.plus{
+    color: #7e7e7e;
+    font-weight: normal;
 }
 #Info{ 
     display: flex;
     width: 100vw;
-    justify-content: center;
+    height: auto;
     flex-wrap: wrap;
     max-width: 1366px;
-    margin: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-shadow: -2px 2px 16px rgba(141, 141, 141, 0.6);
+    border-radius: 20px;
+    padding-bottom: 30px;
 }
 
 #Info div{ 
@@ -52,6 +74,11 @@ flex-direction: column;
 text-align: center;
 padding: 2%;
 border-radius: 30px;
+box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
+}
+body{
+    max-width: 1300px;
+    background-color: #e0e0e0;
 }
 
 #Info div img{ 
@@ -64,11 +91,14 @@ border-radius: 30px;
 #Info div li{ 
     font-size: 2rem;
     color: #66B1F2;
+    font-weight: 500;
 }
 
 #Info div:hover{ 
     background-color:#66B1F2 ;
+    transition: background-color .5s;
     .texto{
         color:#252273;
+        font-weight: 700;
     }
 }
