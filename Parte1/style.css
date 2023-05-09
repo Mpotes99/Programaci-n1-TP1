@@ -3,7 +3,7 @@
     margin: 0 ;
     box-sizing: border-box;
     font-family: "Roboto";
-}
+} 
 .container{
     text-align: center;
 }
@@ -97,8 +97,8 @@ border-radius: 30px;
 #Info div:hover{ 
     background-color:#66B1F2 ;
     transition: background-color .5s;
-    .texto{
-        color:#252273;
-        font-weight: 700;
-    }
+}
+#Info div:hover .texto {
+    color:#252273;
+    font-weight: 700;
 }
