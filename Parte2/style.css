@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+h1{
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 20px;
+    color: #8A2AE3;
+    font-weight: 800;
+    user-select: none;   
+    box-shadow: 0 0 5px #8A2AE3,
+    0 0 15px #8A2AE3,
+    0 0 20px #8A2AE3,
+    0 0 50px #8A2AE3; 
+}
+.botones{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.botones button{
+    width: 250px;
+    height: 60px;
+    font-size: 1.5rem;
+    background: #8A2AE3;
+    color: white;
+    border-radius: 50px;
+    border: none;
+}
+.container{
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+.texto{
+    text-align: justify;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 1.2rem;
+    list-style: none;
+    margin-top: 10px;
+}
+
+button:hover{
+    background: #8A2AE3;
+    color: #fff;
+    box-shadow: 0 0 5px #8A2AE3,
+                0 0 15px #8A2AE3,
+                0 0 20px #8A2AE3,
+                0 0 50px #8A2AE3;
+}
+.container{
+    background-color: #222222;
+}
+#Info{
+    width:500px;
+    height: auto;
+}
+#Info li span{
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+.info1{
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    box-shadow: 0 0 5px #8A2AE3,
+    0 0 15px #8A2AE3,
+    0 0 20px #8A2AE3,
+    0 0 50px #8A2AE3;
+    padding: 80px;
+}
+.it{
+    color: white;
+    font-weight: 300;
+}
+.precio{
+    color: #8A2AE3;
+    font-family: 2rem;
+}

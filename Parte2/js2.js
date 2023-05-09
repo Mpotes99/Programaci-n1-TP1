@@ -31,13 +31,13 @@ function verProductos(){
         mostrarInfo += `<div> <ul>`
     for(let z in y){ 
         if(z == 0){ 
-            mostrarInfo += `<li> Codigo de producto: ${y[z]} </li>`
+            mostrarInfo += `<li class="texto"> <span>Codigo de producto:</span><br> ${y[z]} </li>`
         }else if(z == 2){ 
-            mostrarInfo += `<li> Categoria: ${y[z]}</li>`
+            mostrarInfo += `<li class="texto"> <span>Categoria:</span><br>${y[z]}</li>`
         }else if(z == 3){ 
-            mostrarInfo += `<li> $${y[z]} </li>`
+            mostrarInfo += `<li class="texto"><br><span class="precio">$ ${y[z]}</span> </li>`
         }else{ 
-            mostrarInfo += `<li> ${y[z]}</li>`
+            mostrarInfo += `<li class="texto"><span>Nombre de producto:</span> <br>${y[z]}</li>`
         }  
     }
     mostrarInfo += `</ul> </div>`
