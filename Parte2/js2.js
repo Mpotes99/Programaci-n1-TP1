@@ -39,7 +39,7 @@ function verProductos() {
         let listaProductos = "";
 //i el contador inicializao en 0
 //i++ aumenta el valor para seguir al otro arrays
-    for (let i = 0; i < productos.length; i++) {
+    for (let i = 0; i < productos.length /* */ */; i++) {
         // la n es para el salto de linea y que quede ordenado
         listaProductos += `Código: # ${productos[i].codigo}\n`;
         listaProductos += `Nombre: ${productos[i].nombre}\n`;
