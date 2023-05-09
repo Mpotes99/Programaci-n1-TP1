@@ -1,52 +1,49 @@
+'use strict' ; 
 
-//array productoss donde se guardan los produc que el usuario cargue
-let productos = [];
-//se ejecuta con el boton
-function cargarProducto() {
-do {
-    let codigo = prompt("Ingrese el código del producto:");
-    let nombre = prompt("Ingrese el nombre del producto:");
-    let categoria = prompt("Ingrese la categoría del producto:");
-    let precio = prompt("Ingrese el precio del producto:");
-    let descripcion = prompt("Ingrese la descripción del producto:");
+let productos = []; 
 
-    let producto = {
-        codigo: codigo,
-        nombre: nombre,
-        categoria: categoria,
-        precio: precio,
-        descripcion: descripcion,
-    };
-//agregamos los datos que ingreso al array productos con push
-    productos.push(producto);
 
-    let continuar = prompt("¿Desea cargar otro producto? (s/n)").toLowerCase();
-    if (continuar !== "s" && continuar !== "si") {
-    break;
-    }
-    } while (true);
+let codigo = '';
+let nombre = ''; 
+let categoria = ''; 
+let precio = '';
+let descripcion = ''; 
+let x = 0; 
+let mostrarInfo = ''; 
 
-    alert("Productos cargados correctamente.");
+function cargarProducto(){ 
+    do{ 
+        codigo = prompt('Ingrese el codigo del producto') ; 
+        nombre = prompt('Ingrese el nombre del producto') ; 
+        categoria = prompt('Ingrese la categoria del producto'); 
+        precio = parseInt(prompt('Ingrese el precio del producto')) ; 
+        descripcion = prompt('Ingrese la descripcion del producto'); 
+
+        productos[x] = [codigo, nombre, categoria, precio, descripcion] ; 
+        x++
+
+    }while(confirm('Desea agregar otro producto?'))
 }
 
-//muestra la lista de produc. cargados
-function verProductos() {
-    //Si no hay datos en producots muestra:
-    if (productos.length === 0) {
-        alert("No hay productos cargados.");
-    //y si no muestra lo cargado
-    } else {
-        let listaProductos = "";
-//i el contador inicializao en 0
-//i++ aumenta el valor para seguir al otro arrays
-    for (let i = 0; i < productos.length; i++) {
-        // la n es para el salto de linea y que quede ordenado
-        listaProductos += `Código: # ${productos[i].codigo}\n`;
-        listaProductos += `Nombre: ${productos[i].nombre}\n`;
-        listaProductos += `Categoría: ${productos[i].categoria}\n`;
-        listaProductos += `Precio: $ ${productos[i].precio}\n`;
-        listaProductos += `Descripción: ${productos[i].descripcion}\n\n`;
+function verProductos(){ 
+
+    for(let y of productos){ 
+        mostrarInfo += `<div> <ul>`
+    for(let z in y){ 
+        if(z == 0){ 
+            mostrarInfo += `<li> Codigo de producto: ${y[z]} </li>`
+        }else if(z == 2){ 
+            mostrarInfo += `<li> Categoria: ${y[z]}</li>`
+        }else if(z == 3){ 
+            mostrarInfo += `<li> $${y[z]} </li>`
+        }else{ 
+            mostrarInfo += `<li> ${y[z]}</li>`
+        }  
     }
-    alert(listaProductos);
+    mostrarInfo += `</ul> </div>`
     }
+    document.getElementById("Info").innerHTML = mostrarInfo; 
 }
+
+
+console.table(productos); 
