@@ -12,19 +12,63 @@ f. Botón de añadir al carrito.
 Se pide también un botón que diga ordenar y que muestre los
 televisores del menor precio al mayor precio.*/
 
-let codigos = ["352453", "4234235", "356345", "43657", "5735245", "42425245", "45245", "46245245", "46245245"];
+let televisores = [] ; 
 
-let stock = ["42", "12", "531", "12", "4", "64", "1435", "123", "53"];
+televisores[0] = ["352453", "42", "img/televisor1.jpg", 139.999, "Smart TV 4K UHD Samsung 50'", "Añadir al carrito" ];
 
-let fotos =  ["img/AU7000_50_Shop_01.webp","img/28b9dea1d9f1e07ce69215c29bdf","img/d1121c73ded6266ec57f5b0bdd31.jpg","img/8ceaf934954792eea028e9b44cfd.jpg","img/751a1caba4776b838112bc0724ab.jpg","img/97b837b2979bb9dabc688ad1dd5c.webp","img/f44260d337db554f68f663dd3fcc.webp","img/e03608af218ecbef68b673b0b8cc.jpg","img/51aa5dce9507a3ae536acdc3c7a1.jpg"];
+televisores[1] = ["4234235", "12", "img/televisor2.jpg", 154.999, "Smart TV 4K 55' LG", "Añadir al carrito"];
 
-let precios = [139.999, 154.999, 99.999, 130.999, 53.999, 57.999, 259.999, 65.999, 65.999];
+televisores[2] =  ["356345", "531", "img/televisor3.jpg", 99.999, "Smart TV Philips 62' FHD", "Añadir al carrito" ];
 
-let descripcion = ["Smart TV 4K UHD Samsung 50", "Smart TV 4K 55 LG", "Smart TV Philips 43 FHD", "Smart TV 50 4K UHD Philips", "Smart TV 32” HD Android TV", "Smart TV 32 HD TCL", "Smart TV 4K 65 LG", "Smart TV Philips 32 D", "Smart TV 40 Full HD TCL"];
+televisores[3] = ["43657", "12", "img/televisor4.webp", 130.999, "Smart TV 50 4K UHD Philips", "Añadir al carrito"];
+
+televisores[4] = [ "5735245", "32", "img/televisor5.jpg", 53.999, "Smart TV 70' HD Android TV",  "Añadir al carrito"];
+
+televisores[5]  = ["42425245", "52", "img/televisor6.webp", 57.999, "Smart TV 55 HD TCL", "Añadir al carrito"]; 
+
+televisores[6] = ["45245", "60","img/televisor7.jpg", 259.999, "Smart TV 4K 65' LG", "Añadir al carrito"] ; 
+
+televisores[7] = ["46245245", "75", "img/televisor8.jpg", 150.000, "Smart TV Philips 50' HD", "Añadir al carrito"] ; 
+
+televisores[8] = ["4765432", "43",  "img/televisor9.webp", 65.999, "Smart TV 60' FHD TCL", "Añadir al carrito"] ; 
+
 
 // Función para mostrar televisores
+let mostrarInfo = '' ; 
 
 function mostrarTelevisores(){
-    let tv= document.getElementById(televisores);
-    tv.innerHTML = "";
+
+for(let x of televisores){ 
+    mostrarInfo = '<div> <ul>' ;
+    for(let z in x){ 
+        if(z == 0){ 
+            mostrarInfo += `<li> Codigo del producto: ${x[z]} </li> `;
+        }else if(z == 1){ 
+            mostrarInfo += `<li> ${x[z]} en stock  </li>`;
+        }else if(z == 2){ 
+            mostrarInfo += `<li> <img src = "${x[z]}" alt = televisor> </img> </li>`;
+        }else if( z == 3){ 
+            mostrarInfo += `<li> $${x[z]}  </li>`;
+        }else if(z == 5){ 
+            mostrarInfo += `<li> <button> ${x[z]} </button> </li>`;
+        }else{ 
+            mostrarInfo += `<li> " ${x[z]} " </li>`;
+        }
+    } 
+    mostrarInfo += '</ul> </div>'
+    document.getElementById("televisores-container").innerHTML += mostrarInfo ;
+}
+}
+
+let mayorPrecio = 0; 
+function Ordenar(){ 
+
+for (let x of televisores){ 
+    for(let z of x){ 
+        if  (z == 3 && z > mayorPrecio){ 
+            
+        }
+    }
+}
+
 }
