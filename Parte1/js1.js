@@ -22,7 +22,7 @@ let MostrarInfo = '' ;
     MostrarInfo += '<div> <ul>'; 
     for(let y in x){ 
         if(y == 1){ 
-            MostrarInfo += ` <li class="texto"><a href = "">  <img src ='${x[y]}'>  </a></li> `;
+            MostrarInfo += ` <li class="texto"><a href = "" target= ¨_blank¨> <img src ='${x[y]}'>  </a></li> `;
         }else if(y==2){ 
             MostrarInfo += `<li class="texto"> $${x[y]} </li>`
         }else{ 
