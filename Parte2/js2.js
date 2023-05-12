@@ -1,29 +1,59 @@
 'use strict' ; 
 
-let productos = []; 
 
 
-let codigo = '';
+/*let codigo = '';
 let nombre = ''; 
 let categoria = ''; 
 let precio = '';
-let descripcion = ''; 
-let x = 0; 
+let descripcion = '';  */
+
 let mostrarInfo = ''; 
 
+let x = 0; 
+
 function cargarProducto(){ 
-    do{ 
-        codigo = prompt('Ingrese el codigo del producto') ; 
+    let mostrarForm =
+     `<form> 
+     <input type= "text" class= "Inputs" id="codigo" placeholder="Codigo del producto">     
+     <input type= "text" class= "Inputs" id="nombre" placeholder="Nombre del producto">
+     <input type= "text" class= "Inputs" id="categoria" placeholder="Categoria"> 
+     <input type= "number" class="Inputs" id="precio" placeholder="Precio">
+     <input type= "text" class= "Inputs" id="descripcion" placeholder="Descripcion del producto">
+     <input type= "submit" onclick="obtenerDatos();">
+     </form>`
+     document.getElementById("ContainerForm").innerHTML = mostrarForm ; 
+     
+}
+
+
+     
+       /* codigo = prompt('Ingrese el codigo del producto') ; 
         nombre = prompt('Ingrese el nombre del producto') ; 
         categoria = prompt('Ingrese la categoria del producto'); 
         precio = parseInt(prompt('Ingrese el precio del producto')) ; 
-        descripcion = prompt('Ingrese la descripcion del producto'); 
+        descripcion = prompt('Ingrese la descripcion del producto'); */
+        let productos= [45, 45, 43, 42]; 
 
-        productos[x] = [codigo, nombre, categoria, precio, descripcion] ; 
-        x++
+       function obtenerDatos(){ 
 
-    }while(confirm('Desea agregar otro producto?'))
-}
+        let codigo = ''; 
+        let nombre = ''; 
+        let categoria = ''; 
+        let precio = 0; 
+        let descripcion = ''; 
+
+         codigo=document.getElementById("codigo").value; 
+         nombre=document.getElementById("nombre").value; 
+         categoria=document.getElementById("categoria").value; 
+         precio=document.getElementById("precio").value; 
+         descripcion=document.getElementById("descripcion").value; 
+
+        productos[x] = [codigo, nombre, categoria, precio, descripcion]; 
+       x++;
+    }
+    console.table(productos);
+
 
 function verProductos(){ 
 
